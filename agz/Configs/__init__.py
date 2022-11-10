@@ -7,8 +7,8 @@ from Crypto.Cipher import AES
 from re import findall
 from colorama import Fore
 
-web = {'app_name': 'Main', 'app_version': '4.0.8', 'platform': 'Web', 'package': 'web.rubika.ir', 'lang_code': 'fa'}
-android = {'app_name': 'Main', 'app_version': '2.9.8', 'platform': 'Android', 'package': 'app.rbmain.a', 'lang_code': 'fa'}
+web = {'app_name': 'Main', 'app_version': '3.2.2', 'platform': 'Web', 'package': 'web.shad.ir', 'lang_code': 'fa'}
+android = {'app_name': 'Main', 'app_version': '2.9.9', 'platform': 'Android', 'package': 'ir.medu.shad', 'lang_code': 'fa'}
 
 class encryption:
     def __init__(self, auth):
@@ -112,7 +112,7 @@ class maker(object,):
             t = False
             while t == False:
                 try:
-                    r = loads(self.enc.decrypt(post(json={"api_version":"5","auth":self.auth,"data_enc":self.enc.encrypt(dumps({"method":method_name,"input":method_data,"client":android if custom_client == 4 else web}))},url=f"https://messengerg2c{choice(range(1 , 100))}.iranlms.ir").json()["data_enc"]))
+                    r = loads(self.enc.decrypt(post(json={"api_version":"5","auth":self.auth,"data_enc":self.enc.encrypt(dumps({"method":method_name,"input":method_data,"client":android if custom_client == 4 else web}))},url=f"https://shadmessenger{choice(range(1 , 100))}.iranlms.ir").json()["data_enc"]))
                     t = True
                 except: t = False
             return r
@@ -121,7 +121,7 @@ class maker(object,):
             t = False
             while t == False:
                 try:
-                    r = post(json={"api_version":"5","auth":self.auth,"data_enc":self.enc.encrypt(dumps({"method":method_name,"input":method_data,"client":android if custom_client == 4 else web}))},url=f"https://messengerg2c{choice(range(1 , 100))}.iranlms.ir")
+                    r = post(json={"api_version":"5","auth":self.auth,"data_enc":self.enc.encrypt(dumps({"method":method_name,"input":method_data,"client":android if custom_client == 4 else web}))},url=f"https://shadmessenger{choice(range(1 , 100))}.iranlms.ir")
                     t = True
                 except: t = False
             return r
@@ -130,7 +130,7 @@ class maker(object,):
             t = False
             while t == False:
                 try:
-                    r = loads(self.enc.decrypt(loads(post(json={"api_version":"5","auth":self.auth,"data_enc":self.enc.encrypt(dumps({"method":method_name,"input":method_data,"client":android if custom_client == 4 else web}))},url=f"https://messengerg2c{choice(range(1 , 100))}.iranlms.ir").text)['data_enc']))
+                    r = loads(self.enc.decrypt(loads(post(json={"api_version":"5","auth":self.auth,"data_enc":self.enc.encrypt(dumps({"method":method_name,"input":method_data,"client":android if custom_client == 4 else web}))},url=f"https://shadmessenger{choice(range(1 , 100))}.iranlms.ir").text)['data_enc']))
                     t = True
                 except: t = False
             return r
@@ -139,7 +139,7 @@ class maker(object,):
             t = False
             while t == False:
                 try:
-                    r = loads(self.enc.decrypt(post(json={"api_version":"4","auth":self.auth,"client":android if custom_client == 4 else web,"data_enc":self.enc.encrypt(dumps(method_data)),"method":method_name},url=f"https://messengerg2c{choice(range(1 , 100))}.iranlms.ir").json()["data_enc"]))
+                    r = loads(self.enc.decrypt(post(json={"api_version":"4","auth":self.auth,"client":android if custom_client == 4 else web,"data_enc":self.enc.encrypt(dumps(method_data)),"method":method_name},url=f"https://shadmessenger{choice(range(1 , 100))}.iranlms.ir").json()["data_enc"]))
                     t = True
                 except: t = False
             return r
